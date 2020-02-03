@@ -24,7 +24,9 @@
     /* font-size: 46px; */
     	display: block;
 	position: relative;
-    	line-height: 6rem;
+	line-height: 6rem;
+	/*line-height: 1; roshan - when the line height is applied  - දෙවියන් ඇතුළු සියලු සතුන්ට පින්දීම was not good because it spread to two lines*/ 
+	/*padding-top: 1.4rem;  roshan */
 	outline:none;
     	-webkit-transition:  color 0.2s ease-in-out;
 	-moz-transition:  color 0.2s ease-in-out;
@@ -49,14 +51,16 @@
 	transition:  all 0.2s ease-in-out;
 }
 .st-accordion ul li > a:hover{
-    color: #1693eb;
+    /* color: #1693eb; */
+    color: #EF6C00; /*roshan*/
 }
 .st-accordion ul li > a:hover span{
 	opacity:1;
 	right: 1rem;
 }
 .st-accordion ul li.st-open > a{
-    color: #1693eb;
+    /* color: #1693eb; */
+    color: #EF6C00; /*roshan*/
 }
 .st-accordion ul li.st-open > a span{
 	-webkit-transform:rotate(180deg);
