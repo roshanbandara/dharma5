@@ -352,16 +352,18 @@ p {
 .pirith {
   background-color: #ddd; }
 
-.grid-gatha-pirith li a {
-  font-size: 3rem;
-  color: brown;
-  padding-left: 1rem; }
-
-.grid-gatha-pirith li div p {
-  font-family: "TIPITAKA", sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.325; }
+.grid-gatha-pirith li {
+  line-height: 5rem; }
+  .grid-gatha-pirith li a {
+    font-size: 3rem;
+    color: brown;
+    padding-left: 1rem;
+    border-radius: .75rem; }
+  .grid-gatha-pirith li div p {
+    font-family: "TIPITAKA", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.325; }
 
 .about {
   text-align: center; }
