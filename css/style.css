@@ -140,15 +140,17 @@ img, embed, object, video {
   word-spacing: .2rem;
   color: #c7c7c7; }
 
+/*
 .heading-2:after {
-  display: block;
-  height: 2px;
-  background-color: #ff9900;
-  content: " ";
-  width: 100px;
-  margin: 0 auto;
-  margin-top: 1rem; }
-
+	display: block;
+	height: 2px;
+	background-color: $color-primary;
+	content: " "; //when useing 'after' pseudo class it is very importan to specify the content, in this case we don't want any words to appear so here we use space
+	width: 100px;
+	margin: 0 auto;
+	margin-top: 1rem;   
+}
+*/
 p {
   font-size: 2.4rem;
   padding-top: 1.75rem;
