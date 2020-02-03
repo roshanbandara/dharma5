@@ -5,6 +5,11 @@
   src: url(../fonts/AbhayaLibre-Regular.ttf);
   font-display: swap; }
 
+@font-face {
+  font-family: 'TIPITAKA';
+  src: url(../fonts/TIPITAKA.ttf);
+  font-display: swap; }
+
 *,
 *::before,
 *::after {
@@ -338,7 +343,7 @@ p {
   color: brown; }
 
 .grid-gatha-pirith li div p {
-  font-family: sans-serif;
+  font-family: "TIPITAKA", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.325; }
