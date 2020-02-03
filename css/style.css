@@ -6,8 +6,8 @@
   font-display: swap; }
 
 @font-face {
-  font-family: 'TIPITAKA';
-  src: url(../fonts/TIPITAKA.ttf);
+  font-family: 'BhashitaScreen-Corrected';
+  src: url(../fonts/BhashitaScreen-Corrected.ttf);
   font-display: swap; }
 
 *,
@@ -253,8 +253,7 @@ p {
     -o-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s;
     padding: .8rem 1.4rem .5rem; }
-  .top-nav__link a:hover,
-  .top-nav__link a:active {
+  .top-nav__link a:hover {
     border-bottom: 3px solid #ff9900; }
   .top-nav__link-box a {
     display: -webkit-box;
@@ -323,18 +322,18 @@ p {
 
 .sticky div .active:link,
 .sticky div .active:visited {
-  color: #fff;
-  color: #c27400; }
+  color: #EF6C00; }
   .sticky div .active:link .fa,
   .sticky div .active:visited .fa {
-    fill: #c27400; }
+    fill: #EF6C00; }
 
 .sticky .fa {
   fill: #737373; }
 
 .sticky .link-text {
   font-size: 1.125rem;
-  letter-spacing: 0; }
+  letter-spacing: .075rem;
+  font-weight: 600; }
 
 .sticky .top-nav__links {
   -ms-grid-columns: (1fr)[6];
@@ -357,12 +356,11 @@ p {
 .grid-gatha-pirith li {
   line-height: 5rem; }
   .grid-gatha-pirith li a {
-    font-size: 3rem;
+    font-size: 2.75rem;
     color: brown;
-    padding-left: 1rem;
-    border-radius: .75rem; }
+    padding-left: 1rem; }
   .grid-gatha-pirith li div p {
-    font-family: "TIPITAKA", sans-serif;
+    font-family: "BhashitaScreen-Corrected", sans-serif;
     font-size: 2rem;
     font-weight: 600;
     line-height: 1.325; }
