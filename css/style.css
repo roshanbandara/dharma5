@@ -365,6 +365,7 @@ p {
     padding-left: 1rem;
     padding-right: 1rem; }
     .grid-gatha-pirith li div p {
+      font-family: Georgia,"Bitstream Charter", serif;
       font-size: 2.75rem;
       font-weight: bold;
       line-height: 1.1; }
