@@ -5,11 +5,14 @@
   src: url(../fonts/AbhayaLibre-Regular.ttf);
   font-display: swap; }
 
+/*
 @font-face {
-  font-family: 'BhashitaScreen-Corrected';
-  src: url(../fonts/BhashitaScreen-Corrected.ttf);
-  font-display: swap; }
+     font-family: 'Bhashitha-Serif';
+     src: url(../fonts/Bhashitha-Serif.ttf);
+     font-display: swap; // To ensure text remains visible during webfont load
+}
 
+$font-TIPITAKA: 'Bhashitha-Serif', sans-serif;*/
 *,
 *::before,
 *::after {
@@ -30,7 +33,7 @@ body {
   text-rendering: optimizeLegibility; }
 
 section {
-  padding: 6rem 1rem; }
+  padding: 6rem 0; }
 
 footer {
   padding-top: 6rem; }
@@ -91,7 +94,6 @@ img, embed, object, video {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  background: white;
   -webkit-animation: ripple-animation 2s;
           animation: ripple-animation 2s; }
 
@@ -128,7 +130,7 @@ img, embed, object, video {
   color: #555; }
 
 .heading-1 {
-  font-size: 4rem;
+  font-size: 3.75rem;
   line-height: .9;
   color: #c7c7c7;
   letter-spacing: .1rem; }
@@ -169,7 +171,7 @@ p {
   margin-bottom: 1rem; }
 
 .mb-sm {
-  margin-bottom: 2rem; }
+  margin-bottom: 1.5rem; }
 
 .mb-md {
   margin-bottom: 3rem; }
@@ -230,7 +232,7 @@ p {
         -ms-grid-row-align: center;
         align-self: center; }
   .top-nav__logo {
-    height: 12rem; }
+    height: 10.75rem; }
   .top-nav__links {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
@@ -277,7 +279,7 @@ p {
   padding-bottom: .3rem; }
 
 .main-heading {
-  margin: 0 7.5vw 20vw;
+  margin: 0 7.5vw 22.5vw;
   text-align: center; }
   .main-heading p {
     font-size: 2.25rem;
@@ -359,11 +361,14 @@ p {
     font-size: 2.75rem;
     color: brown;
     padding-left: 1rem; }
-  .grid-gatha-pirith li div p {
-    font-family: "BhashitaScreen-Corrected", sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.325; }
+  .grid-gatha-pirith li div {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    .grid-gatha-pirith li div p {
+      font-family: "Open Sans";
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 1.35; }
 
 .about {
   text-align: center; }
