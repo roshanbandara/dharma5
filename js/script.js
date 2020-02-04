@@ -111,7 +111,7 @@ $(document).ready(function() {
 // nav bar highligt on scroll=========================================================================================================codepen.io - https://codepen.io/ivanmt07/pen/pxONrw
 function onScroll(event){
      var sections = document.querySelectorAll('#menu-center a');
-     var scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+     var scrollPos = window.pageYOffset + 100 || document.documentElement.scrollTop || document.body.scrollTop; //I addded this '+ 100' by searching a lot I inspired by this "https://www.w3schools.com/jsref/prop_element_scrolltop.asp" - this is to highlight the nav element before 100px.
      
      for( var i = 0; i < sections.length; i++) {
        var currLink = sections[i]; 
