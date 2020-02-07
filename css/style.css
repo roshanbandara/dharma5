@@ -259,6 +259,108 @@ p {
 .about {
   text-align: center; }
 
+.section-book {
+  font-family: sans-serif; }
+
+.book {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(85, 85, 85, 0.5);
+          box-shadow: 0 1.5rem 4rem rgba(85, 85, 85, 0.5); }
+  .book__form {
+    width: 100%;
+    padding: 6rem 3rem; }
+
+.form .inputWithIcon input {
+  padding-left: 5.5rem; }
+
+.form .inputWithIcon {
+  position: relative; }
+
+.form .inputWithIcon div {
+  position: absolute;
+  left: 1rem;
+  top: 1.4rem;
+  padding: 0 .8rem;
+  color: #969696;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 2.5rem; }
+
+.form .inputWithIcon input:focus + div {
+  color: #555; }
+
+.form__input, .form__textarea {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: .5rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none;
+  border-bottom: 3px solid transparent;
+  /* &&& */
+  width: 100%;
+  display: block;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  /* border-botton animation */
+  -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2); }
+  .form__input:focus, .form__textarea:focus {
+    outline: none;
+    /*remove the blue outline of the boxes*/
+    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #00c800;
+    /* &&& */
+    /* also added this to the initial state. because when add the border it moves down a bit the entire box*/ }
+  .form__input:focus:invalid, .form__textarea:focus:invalid {
+    /* if the user enterd data to the fields are invalied, it gets the botton border dark */
+    border-bottom: 3px solid #EF6C00; }
+  .form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
+    /* set the place holder text color.*/
+    color: #737373; }
+
+.form__label {
+  font-size: 1.2rem;
+  margin-left: 5.6rem;
+  display: block;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  /* OOO */ }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+      -ms-transform: translateY(-4rem);
+          transform: translateY(-4rem); }
+
+.form .btn--green {
+  width: 100%; }
+
+.letter-icon svg {
+  fill: #737373; }
+
+.form-messages {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: .3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #333; }
+
+.success {
+  background-color: rgba(38, 191, 68, 0.8); }
+
+.error {
+  background-color: rgba(209, 46, 46, 0.8); }
+
 .footer {
   background-color: #ddd; }
   .footer span {
@@ -404,3 +506,68 @@ p {
 
 .grid-gatha-pirith li a {
   -webkit-tap-highlight-color: transparent; }
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 3rem;
+  border-radius: .5rem;
+  /*to make the button round */
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+  position: relative;
+  /* to align the ::after psudo button */
+  font-weight: 700;
+  letter-spacing: .25rem;
+  line-height: 1.2;
+  border: none;
+  cursor: pointer; }
+
+.btn:hover {
+  -webkit-transform: translateY(-0.3rem);
+      -ms-transform: translateY(-0.3rem);
+          transform: translateY(-0.3rem);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    -webkit-transform: scaleX(1.2) scaleY(1.4);
+        -ms-transform: scaleX(1.2) scaleY(1.4);
+            transform: scaleX(1.2) scaleY(1.4);
+    opacity: 0; }
+
+.btn:active, .btn:focus {
+  outline: none;
+  -webkit-transform: translateY(-0.1rem);
+      -ms-transform: translateY(-0.1rem);
+          transform: translateY(-0.1rem);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--green {
+  background-color: #EF6C00;
+  color: white; }
+  .btn--green::after {
+    background-color: #EF6C00; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: .5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s; }
+
+.btn--animated {
+  -webkit-animation: moveInBottom .4s ease-out .75s;
+          animation: moveInBottom .4s ease-out .75s;
+  /*.75s is the animatino delay */
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  /* we could see button is visible before the animation start, to fix this we use this. this automaticaly adds the styles of 0% that is on the @keyframe before the animation start */ }
