@@ -85,7 +85,7 @@ p {
   margin-bottom: 1.5rem; }
 
 .mb-md {
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem !important; }
 
 .mb-lg {
   margin-bottom: 4rem; }
@@ -271,6 +271,9 @@ p {
     width: 100%;
     padding: 6rem 3rem; }
 
+.form__group {
+  margin-bottom: .5rem; }
+
 .form .inputWithIcon input {
   padding-left: 5.5rem; }
 
@@ -296,6 +299,7 @@ p {
   font-family: inherit;
   color: inherit;
   padding: 1.5rem 2rem;
+  color: #737373;
   border-radius: .5rem;
   background-color: rgba(255, 255, 255, 0.75);
   border: none;
@@ -323,9 +327,18 @@ p {
   .form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
     /* set the place holder text color.*/
     color: #737373; }
+  .form__input::-moz-placeholder, .form__textarea::-moz-placeholder {
+    color: rgba(115, 115, 115, 0.75); }
+  .form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
+    color: rgba(115, 115, 115, 0.75); }
+  .form__input::-ms-input-placeholder, .form__textarea::-ms-input-placeholder {
+    color: rgba(115, 115, 115, 0.75); }
+  .form__input::placeholder, .form__textarea::placeholder {
+    color: rgba(115, 115, 115, 0.75); }
 
 .form__label {
   font-size: 1.2rem;
+  color: rgba(115, 115, 115, 0.85);
   margin-left: 5.6rem;
   display: block;
   -webkit-transition: all .3s;
