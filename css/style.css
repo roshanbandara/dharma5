@@ -98,7 +98,7 @@ p {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/hero_mobile.jpg);
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero_mobile.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero_mobile.jpg);
-  background-position: center;
+  background-position: top center;
   background-size: cover;
   display: -ms-grid;
   display: grid;
@@ -113,28 +113,57 @@ p {
   -ms-grid-rows: -webkit-min-content 1fr;
   -ms-grid-rows: min-content 1fr;
   grid-template-rows: -webkit-min-content 1fr;
-  grid-template-rows: min-content 1fr; }
+  grid-template-rows: min-content 1fr;
+  /*
+     @media screen and (min-width: 45em) {
+          grid-template-columns: 15rem minmax(57.5rem, 70rem) ;
+          grid-template-rows: min-content;
+          justify-content: space-between;
+     }*/ }
+  .top-nav__logo-black {
+    display: none; }
   .top-nav__logo-box {
     -ms-grid-column-align: center;
         justify-self: center;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
-        align-self: center; }
+        align-self: center;
+    /*
+          @media screen and (min-width: 45em) {
+               grid-column: 1 / 2;
+               grid-row: 1 / 2;
+          }*/ }
   .top-nav__logo {
-    height: 10.75rem; }
+    height: 10.75rem;
+    /*
+          @media screen and (min-width: 45em) {
+               height: 7.5rem;  // decrease the logo size
+               box-sizing: content-box;
+               padding: 1rem 0;
+          }*/ }
   .top-nav__links {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / 2;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1px 1fr 1px 1fr;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 1px;
-    grid-column-gap: 1px; }
+    grid-column-gap: 1px;
+    /*
+          @media screen and (min-width: 45em) {
+               grid-template-columns: repeat(6, 1fr);
+               align-items: center;
+               justify-items: center;
+
+               grid-row-gap: unset;
+               grid-column-gap: unset;
+          }*/ }
   .top-nav__links > div {
     -webkit-box-shadow: 0 0 0 1px #808080;
-            box-shadow: 0 0 0 1px #808080; }
+            box-shadow: 0 0 0 1px #808080;
+    /*
+          @media screen and (min-width: 45em) {
+              box-shadow: none;
+          }*/ }
   .top-nav__link .active {
     background-color: rgba(255, 153, 0, 0.3); }
   .top-nav__link a:link,
@@ -158,7 +187,11 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
     font-size: 1.8rem;
-    color: #fff; }
+    color: #fff;
+    /*
+          @media screen and (min-width: 60em) {
+               flex-direction: row;
+          }*/ }
 
 .fa {
   display: block;
@@ -166,15 +199,6 @@ p {
   width: 25px;
   fill: #fff;
   padding-bottom: .3rem; }
-
-.main-heading {
-  margin: 0 7.5vw 22.5vw;
-  text-align: center; }
-  .main-heading p {
-    font-size: 2.25rem;
-    word-spacing: .2rem;
-    color: #c7c7c7;
-    padding-top: 0; }
 
 .sticky {
   -ms-grid-rows: -webkit-min-content;
@@ -193,6 +217,12 @@ p {
   z-index: 5000;
   min-height: auto; }
 
+/*
+.sticky .top-nav__logo {
+     @media screen and (min-width: 45em) {
+          display: none;
+     }
+}*/
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
   .sticky {
     background-color: rgba(255, 255, 255, 0.9);
@@ -203,9 +233,19 @@ p {
   .sticky {
     background-color: rgba(255, 255, 255, 0.95); } }
 
-.top-nav__logo-black {
-  display: none; }
+/*
+.sticky .top-nav__logo-black { //----for black logo 
 
+     @media screen and (min-width: 45em) {
+          // margin-top: .25rem;
+          box-sizing: content-box;
+          padding: .4rem 0;
+          
+          height: 5rem; 
+          width: auto;
+          display: block;
+     }
+}*/
 .sticky div a:link,
 .sticky div a:visited {
   color: #737373;
@@ -233,13 +273,30 @@ p {
 
 .sticky .top-nav__links > div {
   -webkit-box-shadow: 1px 0 0 0 #c7c7c7;
-          box-shadow: 1px 0 0 0 #c7c7c7; }
+          box-shadow: 1px 0 0 0 #c7c7c7;
+  /*
+     @media screen and (min-width: 45em) {
+          box-shadow: none;
+     }*/ }
 
 .sticky .top-nav__logo-box {
-  display: none; }
+  display: none;
+  /*
+     @media screen and (min-width: 45em) {
+          display: block;
+     }*/ }
 
 .sticky a .active {
   color: #fff; }
+
+.main-heading {
+  margin: 0 7.5vw 22.5vw;
+  text-align: center; }
+  .main-heading p {
+    font-size: 2.25rem;
+    word-spacing: .2rem;
+    color: #c7c7c7;
+    padding-top: 0; }
 
 .pirith {
   background-color: #ddd; }
@@ -264,9 +321,9 @@ p {
 
 .book {
   background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 3px;
-  -webkit-box-shadow: 0 1.5rem 4rem rgba(85, 85, 85, 0.5);
-          box-shadow: 0 1.5rem 4rem rgba(85, 85, 85, 0.5); }
+  border-radius: .25rem;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3); }
   .book__form {
     width: 100%;
     padding: 6rem 3rem; }
@@ -300,7 +357,7 @@ p {
   color: inherit;
   padding: 1.5rem 2rem;
   color: #737373;
-  border-radius: .5rem;
+  border-radius: .25rem;
   background-color: rgba(255, 255, 255, 0.75);
   border: none;
   border-bottom: 3px solid transparent;
@@ -348,7 +405,8 @@ p {
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
-  /* OOO */ }
+  /* OOO */
+  letter-spacing: .075rem; }
 
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
@@ -384,7 +442,10 @@ p {
 }
 */
 .footer {
-  background-color: #ddd; }
+  background-color: #DADDE1; }
+  .footer .social {
+    border: .1rem #a4a4a4;
+    border-style: solid none; }
   .footer span {
     display: block; }
   .footer .footer-content {
@@ -396,11 +457,18 @@ p {
   .footer .sabba-danan {
     font-size: 2.25rem; }
   .footer .copy-credit {
-    font-size: 1.5rem; }
+    width: 70vw;
+    font-family: sans-serif;
+    font-size: 1.15rem;
+    margin: 0 auto;
+    line-height: 1.75;
+    color: #a83f00; }
+    .footer .copy-credit span {
+      display: block; }
   .footer .fa-facebook-f {
-    fill: #3B5998; }
+    fill: #3b5998; }
   .footer .fa-twitter {
-    fill: #55ACEE; }
+    fill: #55acee; }
   .footer .fa-linkedin-in {
     fill: #007bb5; }
   .footer .fa-youtube {
@@ -413,7 +481,7 @@ p {
 .ffa {
   height: 1.8em;
   width: 1.8em;
-  padding: .5rem .5rem;
+  padding: 0.5rem 0.5rem;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   margin: 5px 2px; }
@@ -536,19 +604,16 @@ p {
           animation-fill-mode: backwards; // we could see button is visible before the animation start, to fix this we use this. this automaticaly adds the styles of 0% that is on the @keyframe before the animation start 
      }*/ }
   .btn, .btn:link, .btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
     padding: 1.5rem 3rem;
-    border-radius: .5rem;
+    border-radius: 0.25rem;
     /*to make the button round */
-    -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
     position: relative;
     /* to align the ::after psudo button */
     font-size: 1.6rem;
     font-weight: 700;
-    line-height: 1.2;
     border: none;
     cursor: pointer; }
   .btn:hover {
@@ -579,11 +644,11 @@ p {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    -webkit-transition: all .4s;
-    -o-transition: all .4s;
-    transition: all .4s; }
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s; }
